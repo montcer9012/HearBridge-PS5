@@ -1,0 +1,617 @@
+diag.txt
+hearbridge: 1.4.0 (one build for all firmwares, compiled Oct 30 2026)
+previous run ended with: 769] select: wrote 0 device(s) to /data/hearbridge/devices.json|[116.770] scan: finished (0 device(s) listed)|[120.494] alive: page on :8090, network address 192.168.101.5|[124.746] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)|[150.498] alive: page on :8090, network address 192.168.101.5|[180.469] alive: page on :8090, network address 192.168.101.5|
+state dir: /data/hearbridge: mkdir errno 0; lock ok (errno 0); log ok
+web page: http://192.168.101.5:8090 (diagnostics at http://192.168.101.5:8090/api/diag)
+tile url: http://127.0.0.1:8090/start
+libSceAppInstUtil.sprx: loaded from /system/common/lib/libSceAppInstUtil.sprx
+tile: files rewritten; appmeta before no; init 0 (errno 0); TitleDir NOT FOUND; InstallAll -> 0 (errno 0); AppExists yes; appmeta after no; RESULT ok
+tile appmeta: /user/appmeta/HRBG00001 missing
+firmware: 13.600.007 (system 0x13600007, kernel 0x13600007)
+model: CFI-7019 B01X
+process: pid 97, authid 0x480000001000000e, uid 0, ruid 1
+libSceIpmi.sprx: already loaded (handle 0x12)
+libSceAvcap2.sprx: loaded from /system/common/lib/libSceAvcap2.sprx (rv 24628, res 0, handle 0x6034)
+audio libs: loaded, all Avcap2 functions resolved
+usb /dev/ugen0.1: cannot open (errno 6)
+usb /dev/ugen0.2: 0e8d:3605 class ef: if0.0 e0/01/01 (BT HCI) ep81 int/16 ep01 bulk/512 ep82 bulk/512 ep02 bulk/512 ep8f int/2; if1.0 e0/01/01 (BT HCI) ep83 iso/0 ep03 iso/0; if1.1 e0/01/01 (BT HCI) ep83 iso/9 ep03 iso/9; if1.2 e0/01/01 (BT HCI) ep83 iso/17 ep03 iso/17; if1.3 e0/01/01 (BT HCI) ep83 iso/25 ep03 iso/25; if1.4 e0/01/01 (BT HCI) ep83 iso/33 e
+usb /dev/ugen1.1: cannot open (errno 6)
+usb /dev/ugen1.2: 054c:0ecc class 00: if0.0 01/01/00; if1.0 01/02/00; if1.1 01/02/00 ep8c iso/96; if2.0 01/02/00; if2.1 01/02/00 ep0c iso/196; if3.0 03/00/00 ep81 int/64 ep01 int/64
+usb /dev/ugen2.1: cannot open (errno 6)
+usb devices: 5 ugen node(s)
+libSceSystemService.sprx: found by name libSceSystemService.sprx, handle 0x14
+game detection: on (handle 0x14, module scan 0 of -1; running app 8002d52a0, title id lnc 8002d6430, ss 8002d52b0)
+rest mode watch: on (system state flag; open 80002ba70 h 0x1, poll 80002b9b0 h 0x1)
+bt controller: /dev/ugen0.2 0e8d:3605 class ef (console chip); HCI iface 0 evt 0x81 in 0x82 out 0x02
+bt chip: MediaTek (0e8d:3605)
+
+
+hearbridge.log
+[100.222] adapter: installed bundled firmware rtl8761bu_fw.bin (44484 bytes)
+[100.242] adapter: installed bundled firmware rtl8761bu_config.bin (6 bytes)
+[100.289] HearBridge PS5 1.4.0: startup after replace sweep
+[100.289] HearBridge PS5 1.4.0
+[100.309] attach to running controller (no reset); stop file /data/hearbridge/stop
+[100.310] volume: base gain 250% (/data/hearbridge/gain)
+[100.311] latency: default target 200 ms for a new headset
+[100.312] http: control page at http://192.168.101.5:8090
+[100.315] tile: loaded /system/common/lib/libSceAppInstUtil.sprx (rv 8242, handle 0x2032)
+[100.426] tile: icon from tile version 1, this is 10: reinstalling (unregister 0)
+[103.427] tile: AppExists no after unregister — clear to re-register
+[116.157] tile: register HRBG00001 -> ok (opens http://127.0.0.1:8090/start)
+[116.158] tile: files rewritten; appmeta before no; init 0 (errno 0); TitleDir NOT FOUND; InstallAll -> 0 (errno 0); AppExists yes; appmeta after no; RESULT ok
+[116.188] sysinfo: fw kernel 0x13600007, model CFI-7019 B01X, authid 0x480000001000000e
+[116.189] avcap2: libSceIpmi.sprx already loaded (handle 0x12)
+[116.192] avcap2: LoadStart /system/common/lib/libSceAvcap2.sprx -> rv=49204 res=0
+[116.194] avcap2: libSceAvcap2.sprx handle 0xc034
+[116.195] avcap2: probe: 0 of 6 functions missing
+[116.197] usb: /dev/ugen0.1: open errno 6
+[116.198] usb: /dev/ugen0.2 is 0e8d:3605 class ef: if0.0 e0/01/01 (BT HCI) ep81 int/16 ep01 bulk/512 ep82 bulk/512 ep02 bulk/512 ep8f int/2; if1.0 e0/01/01 (BT HCI) ep83 iso/0 ep03 iso/0; if1.1 e0/01/01 (BT HCI) ep83 iso/9 ep03 iso/9; if1.2 e0/01/01 (BT HCI) ep83 iso/17 ep03 iso/17; if1.3 e0/01/01 (BT HCI) ep83 iso/25 ep03 iso/25; if1.4 e0/01/01 (BT HCI) ep83 iso/33 e
+[116.199] usb: /dev/ugen1.1: open errno 6
+[116.200] usb: /dev/ugen1.2 is 054c:0ecc class 00: if0.0 01/01/00; if1.0 01/02/00; if1.1 01/02/00 ep8c iso/96; if2.0 01/02/00; if2.1 01/02/00 ep0c iso/196; if3.0 03/00/00 ep81 int/64 ep01 int/64
+[116.201] usb: /dev/ugen2.1: open errno 6
+[116.204] module: libSceSystemService.sprx found by name libSceSystemService.sprx, handle 0x14
+[116.205] game: detection on (handle 0x14, scan 0/-1, running app 8002d52a0, lnc title 8002d6430, ss title 8002d52b0)
+[116.207] rest: open event flag 80002ba70 (handle 0x1), poll 80002b9b0 (handle 0x1)
+[116.207] rest: open SceSystemStateMgrStatus -> 0
+[116.208] rest: watch on
+[116.232] headset.ini: cannot open /data/hearbridge/headset.ini
+[116.233] select: no headset.ini — will discover a new device
+[116.233] saved: 0 paired device(s)
+[116.254] hci_usb: controller selection: auto (adapter first)
+[116.257] usb: /dev/ugen1.2 is 054c:0ecc class 00
+[116.257] hci_usb: /dev/ugen1.2 is a Sony gamepad/audio dongle, skipped
+[116.258] usb: /dev/ugen0.2 is 0e8d:3605 class ef
+[116.258] hci_usb: using descriptor (2 HCI iface), evt 0x81 in 0x82 out 0x01
+[116.259] hci_usb: chip profile mediatek
+[116.259] hci_usb: MediaTek controller: ACL out 0x02, system scan paused during page/scan
+[116.264] hci_usb: opened /dev/ugen0.2 (console chip) (40 event / 20 ACL reads in flight)
+[116.264] hci_usb: chip MediaTek (0e8d:3605)
+[116.266] adapter: using /dev/ugen0.2 (the console's own chip), pref=auto, 1 Bluetooth adapter(s) listed
+[116.268] adapter: pick ugen0.2 = Console chip (0e8d:3605) [console]
+[116.353] hci_usb: reads armed: 40 event / 20 ACL (our command)
+[116.353] hci_usb: re-armed idle event read slot 4 (1 so far)
+[116.355] hci_usb: re-armed idle ACL read slot 54 (51 so far)
+[117.357] hci_cmd: 0x1005 no reply (try 1)
+[117.359] a2dp: controller 8 ACL buffers of 1021 bytes
+[117.360] a2dp: event mask 0x7DBFFFFFFFFFFFFF (SSP + EIR enabled)
+[117.361] a2dp: controller address 9C:37:CB:CA:D0:6D
+[117.361] a2dp: session open (pair/AVDTP/SBC next)
+[118.366] hci_cmd: 0x1009 no reply (try 1)
+[118.389] host_bdaddr: saved 9C:37:CB:CA:D0:6D
+[118.389] host_bdaddr: console 9C:37:CB:CA:D0:6D is now the shared host address
+[126.431] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
+[129.257] acl: connection request from 68:CA:C4:CC:A8:10
+[129.258] conn-req: 68:CA:C4:CC:A8:10 CoD 240418 -> rejecting (not saved, 0x0F)
+[129.258] btlink: turned down a connection from saved 68:CA:C4:CC:A8:10 (reason 0x0f)
+[129.259] hci_usb: reads armed: 40 event / 20 ACL (our command)
+[129.260] hci_usb: re-armed idle ACL read slot 48 (101 so far)
+[130.212] alive: page on :8090, network address 192.168.101.5
+[137.289] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
+[145.825] select: page command received: "scanu"
+[145.850] hci_usb: reads armed: 40 event / 20 ACL (our command)
+[145.851] hci_usb: re-armed idle ACL read slot 42 (151 so far)
+[146.857] hci_cmd: 0x0c44 no reply (try 1)
+[146.858] inquiry: starting (~3 s, length=2, GIAC, mode 2)
+[146.859] inquiry: Command Status for 0x0401: 0x00 (started)
+[149.429] inquiry: complete (status 0000)
+[149.430] inquiry: 2 HCI event(s) during the inquiry window
+[149.430] inquiry: found 0 device(s), 0 audio-likely
+[149.431] inquiry: empty (2 event(s)), CSR/PS4 mask + mode 1 and retrying
+[149.432] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[149.433] hci_usb diag: cmd=15 evt=15 acl_in=0 acl_out=0 err=112 last=5 switch=0
+[149.433] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[149.435] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[149.436] inquiry: Command Status for 0x0401: 0x00 (started)
+[152.006] inquiry: complete (status 0000)
+[152.008] inquiry: 2 HCI event(s) during the inquiry window
+[152.008] inquiry: found 0 device(s), 0 audio-likely
+[152.009] inquiry: still empty after recovery (2 event(s))
+[152.010] scan: system page scan restored (2)
+[152.032] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[152.159] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[152.160] inquiry: Command Status for 0x0401: 0x00 (started)
+[154.730] inquiry: complete (status 0000)
+[154.731] inquiry: 2 HCI event(s) during the inquiry window
+[154.732] inquiry: found 0 device(s), 0 audio-likely
+[154.733] inquiry: empty again (2 event(s)), retrying
+[154.733] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[154.734] hci_usb diag: cmd=23 evt=25 acl_in=0 acl_out=0 err=112 last=5 switch=0
+[154.734] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[154.735] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[154.736] inquiry: Command Status for 0x0401: 0x00 (started)
+[157.306] inquiry: complete (status 0000)
+[157.308] inquiry: 2 HCI event(s) during the inquiry window
+[157.309] inquiry: found 0 device(s), 0 audio-likely
+[157.309] inquiry: still empty after recovery (2 event(s))
+[157.311] scan: system page scan restored (2)
+[157.340] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[157.341] scan: finished (0 device(s) listed)
+[160.269] alive: page on :8090, network address 192.168.101.5
+[165.334] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
+[96.340] lock: stale record (pid 97, boot 1793525693, written under flock) taken over
+[96.361] HearBridge PS5 1.4.0: startup after replace sweep
+[96.361] HearBridge PS5 1.4.0
+[96.371] attach to running controller (no reset); stop file /data/hearbridge/stop
+[96.372] volume: base gain 250% (/data/hearbridge/gain)
+[96.373] latency: default target 200 ms for a new headset
+[96.374] http: control page at http://192.168.101.5:8090
+[96.397] tile: loaded /system/common/lib/libSceAppInstUtil.sprx (rv 8242, handle 0x2032)
+[109.077] tile: register HRBG00001 -> ok (opens http://127.0.0.1:8090/start)
+[109.078] tile: files rewritten; appmeta before no; init 0 (errno 0); TitleDir NOT FOUND; InstallAll -> 0 (errno 0); AppExists yes; appmeta after no; RESULT ok
+[109.094] sysinfo: fw kernel 0x13600007, model CFI-7019 B01X, authid 0x480000001000000e
+[109.095] avcap2: libSceIpmi.sprx already loaded (handle 0x12)
+[109.098] avcap2: LoadStart /system/common/lib/libSceAvcap2.sprx -> rv=16436 res=0
+[109.099] avcap2: libSceAvcap2.sprx handle 0x4034
+[109.101] avcap2: probe: 0 of 6 functions missing
+[109.102] usb: /dev/ugen0.1: open errno 6
+[109.103] usb: /dev/ugen0.2 is 0e8d:3605 class ef: if0.0 e0/01/01 (BT HCI) ep81 int/16 ep01 bulk/512 ep82 bulk/512 ep02 bulk/512 ep8f int/2; if1.0 e0/01/01 (BT HCI) ep83 iso/0 ep03 iso/0; if1.1 e0/01/01 (BT HCI) ep83 iso/9 ep03 iso/9; if1.2 e0/01/01 (BT HCI) ep83 iso/17 ep03 iso/17; if1.3 e0/01/01 (BT HCI) ep83 iso/25 ep03 iso/25; if1.4 e0/01/01 (BT HCI) ep83 iso/33 e
+[109.104] usb: /dev/ugen1.1: open errno 6
+[109.105] usb: /dev/ugen1.2 is 054c:0ecc class 00: if0.0 01/01/00; if1.0 01/02/00; if1.1 01/02/00 ep8c iso/96; if2.0 01/02/00; if2.1 01/02/00 ep0c iso/196; if3.0 03/00/00 ep81 int/64 ep01 int/64
+[109.106] usb: /dev/ugen2.1: open errno 6
+[109.108] module: libSceSystemService.sprx found by name libSceSystemService.sprx, handle 0x14
+[109.109] game: detection on (handle 0x14, scan 0/-1, running app 8002d52a0, lnc title 8002d6430, ss title 8002d52b0)
+[109.111] rest: open event flag 80002ba70 (handle 0x1), poll 80002b9b0 (handle 0x1)
+[109.112] rest: open SceSystemStateMgrStatus -> 0
+[109.112] rest: watch on
+[109.127] headset.ini: cannot open /data/hearbridge/headset.ini
+[109.128] select: no headset.ini — will discover a new device
+[109.129] saved: 0 paired device(s)
+[109.141] hci_usb: controller selection: auto (adapter first)
+[109.143] usb: /dev/ugen1.2 is 054c:0ecc class 00
+[109.144] hci_usb: /dev/ugen1.2 is a Sony gamepad/audio dongle, skipped
+[109.145] usb: /dev/ugen0.2 is 0e8d:3605 class ef
+[109.145] hci_usb: using descriptor (2 HCI iface), evt 0x81 in 0x82 out 0x01
+[109.146] hci_usb: chip profile mediatek
+[109.146] hci_usb: MediaTek controller: ACL out 0x02, system scan paused during page/scan
+[109.151] hci_usb: opened /dev/ugen0.2 (console chip) (40 event / 20 ACL reads in flight)
+[109.151] hci_usb: chip MediaTek (0e8d:3605)
+[109.153] adapter: using /dev/ugen0.2 (the console's own chip), pref=auto, 1 Bluetooth adapter(s) listed
+[109.154] adapter: pick ugen0.2 = Console chip (0e8d:3605) [console]
+[109.540] hci_usb: reads armed: 40 event / 20 ACL (our command)
+[109.540] hci_usb: re-armed idle event read slot 4 (1 so far)
+[109.541] hci_usb: re-armed idle ACL read slot 54 (51 so far)
+[110.546] hci_cmd: 0x1005 no reply (try 1)
+[110.547] a2dp: controller 8 ACL buffers of 1021 bytes
+[110.549] a2dp: event mask 0x7DBFFFFFFFFFFFFF (SSP + EIR enabled)
+[110.551] a2dp: controller address 9C:37:CB:CA:D0:6D
+[110.551] a2dp: session open (pair/AVDTP/SBC next)
+[111.559] hci_cmd: 0x1009 no reply (try 1)
+[111.562] host_bdaddr: console 9C:37:CB:CA:D0:6D (already saved)
+[111.577] select: page command received: "scanu"
+[111.589] inquiry: starting (~3 s, length=2, GIAC, mode 2)
+[111.590] inquiry: Command Status for 0x0401: 0x00 (started)
+[114.160] inquiry: complete (status 0000)
+[114.161] inquiry: 2 HCI event(s) during the inquiry window
+[114.162] inquiry: found 0 device(s), 0 audio-likely
+[114.162] inquiry: empty (2 event(s)), CSR/PS4 mask + mode 1 and retrying
+[114.164] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[114.165] hci_usb diag: cmd=13 evt=12 acl_in=0 acl_out=0 err=0 last=0 switch=0
+[114.165] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[114.166] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[114.167] inquiry: Command Status for 0x0401: 0x00 (started)
+[116.737] inquiry: complete (status 0000)
+[116.738] inquiry: 2 HCI event(s) during the inquiry window
+[116.739] inquiry: found 0 device(s), 0 audio-likely
+[116.740] inquiry: still empty after recovery (2 event(s))
+[116.741] scan: system page scan restored (2)
+[116.746] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[116.895] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[116.896] inquiry: Command Status for 0x0401: 0x00 (started)
+[119.466] inquiry: complete (status 0000)
+[119.468] inquiry: 2 HCI event(s) during the inquiry window
+[119.468] inquiry: found 0 device(s), 0 audio-likely
+[119.469] inquiry: empty again (2 event(s)), retrying
+[119.469] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[119.470] hci_usb diag: cmd=21 evt=22 acl_in=0 acl_out=0 err=0 last=0 switch=0
+[119.470] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[119.472] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[119.473] inquiry: Command Status for 0x0401: 0x00 (started)
+[122.043] inquiry: complete (status 0000)
+[122.044] inquiry: 2 HCI event(s) during the inquiry window
+[122.047] inquiry: found 0 device(s), 0 audio-likely
+[122.048] inquiry: still empty after recovery (2 event(s))
+[122.054] scan: system page scan restored (2)
+[122.065] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[122.065] scan: finished (0 device(s) listed)
+[126.085] alive: page on :8090, network address 192.168.101.5
+[130.095] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
+[139.480] acl: connection request from 68:CA:C4:CC:A8:10
+[139.481] conn-req: 68:CA:C4:CC:A8:10 CoD 240418 -> rejecting (not saved, 0x0F)
+[139.482] btlink: turned down a connection from saved 68:CA:C4:CC:A8:10 (reason 0x0f)
+[139.482] hci_usb: reads armed: 40 event / 20 ACL (our command)
+[139.483] hci_usb: re-armed idle ACL read slot 48 (101 so far)
+[147.507] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
+[156.075] alive: page on :8090, network address 192.168.101.5
+[163.679] select: page command received: "scanu"
+[163.707] hci_usb: reads armed: 40 event / 20 ACL (our command)
+[163.708] hci_usb: re-armed idle ACL read slot 42 (151 so far)
+[164.715] hci_cmd: 0x0c44 no reply (try 1)
+[164.716] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[164.718] inquiry: Command Status for 0x0401: 0x00 (started)
+[165.270] inquiry: stopped early for a command (0 result(s))
+[165.793] scan: system page scan restored (2)
+[165.826] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[165.831] select: page command received: "scanu"
+[165.842] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[165.843] inquiry: Command Status for 0x0401: 0x00 (started)
+[168.413] inquiry: complete (status 0000)
+[168.414] inquiry: 2 HCI event(s) during the inquiry window
+[168.415] inquiry: found 0 device(s), 0 audio-likely
+[168.416] inquiry: empty (2 event(s)), CSR/PS4 mask + mode 1 and retrying
+[168.417] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[168.418] hci_usb diag: cmd=39 evt=43 acl_in=0 acl_out=0 err=112 last=5 switch=0
+[168.419] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[168.420] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[168.421] inquiry: Command Status for 0x0401: 0x00 (started)
+[170.678] inquiry: stopped early for a command (0 result(s))
+[171.201] inquiry: still empty after recovery (1 event(s))
+[171.203] scan: system page scan restored (2)
+[171.234] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[171.239] select: page command received: "scanu"
+[171.252] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[171.253] inquiry: Command Status for 0x0401: 0x00 (started)
+[173.823] inquiry: complete (status 0000)
+[173.824] inquiry: 2 HCI event(s) during the inquiry window
+[173.825] inquiry: found 0 device(s), 0 audio-likely
+[173.826] inquiry: empty (2 event(s)), CSR/PS4 mask + mode 1 and retrying
+[173.827] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[173.828] hci_usb diag: cmd=50 evt=55 acl_in=0 acl_out=0 err=112 last=5 switch=0
+[173.829] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[173.830] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[173.831] inquiry: Command Status for 0x0401: 0x00 (started)
+[176.401] inquiry: complete (status 0000)
+[176.402] inquiry: 2 HCI event(s) during the inquiry window
+[176.402] inquiry: found 0 device(s), 0 audio-likely
+[176.403] inquiry: still empty after recovery (2 event(s))
+[176.405] scan: system page scan restored (2)
+[176.417] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[176.543] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[176.544] inquiry: Command Status for 0x0401: 0x00 (started)
+[179.114] inquiry: complete (status 0000)
+[179.116] inquiry: 2 HCI event(s) during the inquiry window
+[179.116] inquiry: found 0 device(s), 0 audio-likely
+[179.116] inquiry: empty again (2 event(s)), retrying
+[179.117] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[179.117] hci_usb diag: cmd=58 evt=65 acl_in=0 acl_out=0 err=112 last=5 switch=0
+[179.118] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[179.119] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[179.120] inquiry: Command Status for 0x0401: 0x00 (started)
+[181.690] inquiry: complete (status 0000)
+[181.691] inquiry: 2 HCI event(s) during the inquiry window
+[181.692] inquiry: found 0 device(s), 0 audio-likely
+[181.692] inquiry: still empty after recovery (2 event(s))
+[181.696] scan: system page scan restored (2)
+[181.707] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[181.708] scan: finished (0 device(s) listed)
+[186.141] alive: page on :8090, network address 192.168.101.5
+[60.290] lock: stale record (pid 97, boot 1793525902, written under flock) taken over
+[60.308] HearBridge PS5 1.4.0: startup after replace sweep
+[60.309] HearBridge PS5 1.4.0
+[60.318] attach to running controller (no reset); stop file /data/hearbridge/stop
+[60.319] volume: base gain 250% (/data/hearbridge/gain)
+[60.320] latency: default target 200 ms for a new headset
+[60.321] http: control page at http://192.168.101.5:8090
+[60.356] tile: loaded /system/common/lib/libSceAppInstUtil.sprx (rv 8242, handle 0x2032)
+[73.028] tile: register HRBG00001 -> ok (opens http://127.0.0.1:8090/start)
+[73.029] tile: files rewritten; appmeta before no; init 0 (errno 0); TitleDir NOT FOUND; InstallAll -> 0 (errno 0); AppExists yes; appmeta after no; RESULT ok
+[73.048] sysinfo: fw kernel 0x13600007, model CFI-7019 B01X, authid 0x480000001000000e
+[73.050] avcap2: libSceIpmi.sprx already loaded (handle 0x12)
+[73.053] avcap2: LoadStart /system/common/lib/libSceAvcap2.sprx -> rv=24628 res=0
+[73.053] avcap2: libSceAvcap2.sprx handle 0x6034
+[73.056] avcap2: probe: 0 of 6 functions missing
+[73.057] usb: /dev/ugen0.1: open errno 6
+[73.058] usb: /dev/ugen0.2 is 0e8d:3605 class ef: if0.0 e0/01/01 (BT HCI) ep81 int/16 ep01 bulk/512 ep82 bulk/512 ep02 bulk/512 ep8f int/2; if1.0 e0/01/01 (BT HCI) ep83 iso/0 ep03 iso/0; if1.1 e0/01/01 (BT HCI) ep83 iso/9 ep03 iso/9; if1.2 e0/01/01 (BT HCI) ep83 iso/17 ep03 iso/17; if1.3 e0/01/01 (BT HCI) ep83 iso/25 ep03 iso/25; if1.4 e0/01/01 (BT HCI) ep83 iso/33 e
+[73.058] usb: /dev/ugen1.1: open errno 6
+[73.059] usb: /dev/ugen1.2 is 054c:0ecc class 00: if0.0 01/01/00; if1.0 01/02/00; if1.1 01/02/00 ep8c iso/96; if2.0 01/02/00; if2.1 01/02/00 ep0c iso/196; if3.0 03/00/00 ep81 int/64 ep01 int/64
+[73.059] usb: /dev/ugen2.1: open errno 6
+[73.061] module: libSceSystemService.sprx found by name libSceSystemService.sprx, handle 0x14
+[73.062] game: detection on (handle 0x14, scan 0/-1, running app 8002d52a0, lnc title 8002d6430, ss title 8002d52b0)
+[73.064] rest: open event flag 80002ba70 (handle 0x1), poll 80002b9b0 (handle 0x1)
+[73.065] rest: open SceSystemStateMgrStatus -> 0
+[73.065] rest: watch on
+[73.075] headset.ini: cannot open /data/hearbridge/headset.ini
+[73.076] select: no headset.ini — will discover a new device
+[73.076] saved: 0 paired device(s)
+[73.086] hci_usb: controller selection: auto (adapter first)
+[73.088] usb: /dev/ugen1.2 is 054c:0ecc class 00
+[73.089] hci_usb: /dev/ugen1.2 is a Sony gamepad/audio dongle, skipped
+[73.089] usb: /dev/ugen0.2 is 0e8d:3605 class ef
+[73.090] hci_usb: using descriptor (2 HCI iface), evt 0x81 in 0x82 out 0x01
+[73.090] hci_usb: chip profile mediatek
+[73.091] hci_usb: MediaTek controller: ACL out 0x02, system scan paused during page/scan
+[73.095] hci_usb: opened /dev/ugen0.2 (console chip) (40 event / 20 ACL reads in flight)
+[73.097] hci_usb: chip MediaTek (0e8d:3605)
+[73.098] adapter: using /dev/ugen0.2 (the console's own chip), pref=auto, 1 Bluetooth adapter(s) listed
+[73.099] adapter: pick ugen0.2 = Console chip (0e8d:3605) [console]
+[73.109] hci_usb: reads armed: 40 event / 20 ACL (our command)
+[73.110] hci_usb: re-armed idle event read slot 4 (1 so far)
+[73.111] hci_usb: re-armed idle ACL read slot 54 (51 so far)
+[74.114] hci_cmd: 0x1005 no reply (try 1)
+[74.116] a2dp: controller 8 ACL buffers of 1021 bytes
+[74.117] a2dp: event mask 0x7DBFFFFFFFFFFFFF (SSP + EIR enabled)
+[74.118] a2dp: controller address 9C:37:CB:CA:D0:6D
+[74.119] a2dp: session open (pair/AVDTP/SBC next)
+[75.126] hci_cmd: 0x1009 no reply (try 1)
+[75.129] host_bdaddr: console 9C:37:CB:CA:D0:6D (already saved)
+[83.160] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
+[89.444] select: page command received: "scanu"
+[89.467] hci_usb: reads armed: 40 event / 20 ACL (our command)
+[89.468] hci_usb: re-armed idle ACL read slot 48 (101 so far)
+[89.469] inquiry: starting (~3 s, length=2, GIAC, mode 2)
+[89.471] inquiry: Command Status for 0x0401: 0x00 (started)
+[90.039] alive: page on :8090, network address 192.168.101.5
+[92.040] inquiry: complete (status 0000)
+[92.041] inquiry: 2 HCI event(s) during the inquiry window
+[92.042] inquiry: found 0 device(s), 0 audio-likely
+[92.042] inquiry: empty (2 event(s)), CSR/PS4 mask + mode 1 and retrying
+[93.048] hci_cmd: 0x0c01 no reply (try 1)
+[93.050] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[93.051] hci_usb diag: cmd=14 evt=12 acl_in=0 acl_out=0 err=56 last=5 switch=0
+[93.051] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[93.052] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[93.054] inquiry: Command Status for 0x0401: 0x00 (started)
+[95.624] inquiry: complete (status 0000)
+[95.625] inquiry: 2 HCI event(s) during the inquiry window
+[95.626] inquiry: found 0 device(s), 0 audio-likely
+[95.627] inquiry: still empty after recovery (2 event(s))
+[95.628] scan: system page scan restored (2)
+[95.634] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[95.767] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[95.768] inquiry: Command Status for 0x0401: 0x00 (started)
+[98.338] inquiry: complete (status 0000)
+[98.339] inquiry: 2 HCI event(s) during the inquiry window
+[98.340] inquiry: found 0 device(s), 0 audio-likely
+[98.340] inquiry: empty again (2 event(s)), retrying
+[98.341] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[98.341] hci_usb diag: cmd=22 evt=22 acl_in=0 acl_out=0 err=56 last=5 switch=0
+[98.342] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[98.343] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[98.345] inquiry: Command Status for 0x0401: 0x00 (started)
+[100.914] inquiry: complete (status 0000)
+[100.916] inquiry: 2 HCI event(s) during the inquiry window
+[100.917] inquiry: found 0 device(s), 0 audio-likely
+[100.917] inquiry: still empty after recovery (2 event(s))
+[100.919] scan: system page scan restored (2)
+[100.942] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[100.942] scan: finished (0 device(s) listed)
+[106.272] select: page command received: "scanu"
+[106.297] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[106.299] inquiry: Command Status for 0x0401: 0x00 (started)
+[108.868] inquiry: complete (status 0000)
+[108.870] inquiry: 2 HCI event(s) during the inquiry window
+[108.871] inquiry: found 0 device(s), 0 audio-likely
+[108.871] inquiry: empty (2 event(s)), CSR/PS4 mask + mode 1 and retrying
+[108.873] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[108.874] hci_usb diag: cmd=32 evt=34 acl_in=0 acl_out=0 err=56 last=5 switch=0
+[108.874] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[108.875] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[108.876] inquiry: Command Status for 0x0401: 0x00 (started)
+[111.446] inquiry: complete (status 0000)
+[111.447] inquiry: 2 HCI event(s) during the inquiry window
+[111.448] inquiry: found 0 device(s), 0 audio-likely
+[111.448] inquiry: still empty after recovery (2 event(s))
+[111.450] scan: system page scan restored (2)
+[111.461] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[111.589] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[111.591] inquiry: Command Status for 0x0401: 0x00 (started)
+[114.160] inquiry: complete (status 0000)
+[114.162] inquiry: 2 HCI event(s) during the inquiry window
+[114.162] inquiry: found 0 device(s), 0 audio-likely
+[114.163] inquiry: empty again (2 event(s)), retrying
+[114.164] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[114.165] hci_usb diag: cmd=40 evt=44 acl_in=0 acl_out=0 err=56 last=5 switch=0
+[114.165] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[114.166] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[114.167] inquiry: Command Status for 0x0401: 0x00 (started)
+[116.737] inquiry: complete (status 0000)
+[116.739] inquiry: 2 HCI event(s) during the inquiry window
+[116.739] inquiry: found 0 device(s), 0 audio-likely
+[116.740] inquiry: still empty after recovery (2 event(s))
+[116.741] scan: system page scan restored (2)
+[116.769] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[116.770] scan: finished (0 device(s) listed)
+[120.494] alive: page on :8090, network address 192.168.101.5
+[124.746] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
+[150.498] alive: page on :8090, network address 192.168.101.5
+[180.469] alive: page on :8090, network address 192.168.101.5
+[70.916] lock: stale record (pid 97, boot 1793526171, written under flock) taken over
+[70.935] HearBridge PS5 1.4.0: startup after replace sweep
+[70.935] HearBridge PS5 1.4.0
+[70.960] attach to running controller (no reset); stop file /data/hearbridge/stop
+[70.962] volume: base gain 250% (/data/hearbridge/gain)
+[70.962] latency: default target 200 ms for a new headset
+[70.963] http: control page at http://192.168.101.5:8090
+[71.000] tile: loaded /system/common/lib/libSceAppInstUtil.sprx (rv 8242, handle 0x2032)
+[83.660] tile: register HRBG00001 -> ok (opens http://127.0.0.1:8090/start)
+[83.661] tile: files rewritten; appmeta before no; init 0 (errno 0); TitleDir NOT FOUND; InstallAll -> 0 (errno 0); AppExists yes; appmeta after no; RESULT ok
+[83.674] sysinfo: fw kernel 0x13600007, model CFI-7019 B01X, authid 0x480000001000000e
+[83.676] avcap2: libSceIpmi.sprx already loaded (handle 0x12)
+[83.679] avcap2: LoadStart /system/common/lib/libSceAvcap2.sprx -> rv=24628 res=0
+[83.680] avcap2: libSceAvcap2.sprx handle 0x6034
+[83.682] avcap2: probe: 0 of 6 functions missing
+[83.683] usb: /dev/ugen0.1: open errno 6
+[83.684] usb: /dev/ugen0.2 is 0e8d:3605 class ef: if0.0 e0/01/01 (BT HCI) ep81 int/16 ep01 bulk/512 ep82 bulk/512 ep02 bulk/512 ep8f int/2; if1.0 e0/01/01 (BT HCI) ep83 iso/0 ep03 iso/0; if1.1 e0/01/01 (BT HCI) ep83 iso/9 ep03 iso/9; if1.2 e0/01/01 (BT HCI) ep83 iso/17 ep03 iso/17; if1.3 e0/01/01 (BT HCI) ep83 iso/25 ep03 iso/25; if1.4 e0/01/01 (BT HCI) ep83 iso/33 e
+[83.685] usb: /dev/ugen1.1: open errno 6
+[83.685] usb: /dev/ugen1.2 is 054c:0ecc class 00: if0.0 01/01/00; if1.0 01/02/00; if1.1 01/02/00 ep8c iso/96; if2.0 01/02/00; if2.1 01/02/00 ep0c iso/196; if3.0 03/00/00 ep81 int/64 ep01 int/64
+[83.686] usb: /dev/ugen2.1: open errno 6
+[83.687] module: libSceSystemService.sprx found by name libSceSystemService.sprx, handle 0x14
+[83.688] game: detection on (handle 0x14, scan 0/-1, running app 8002d52a0, lnc title 8002d6430, ss title 8002d52b0)
+[83.690] rest: open event flag 80002ba70 (handle 0x1), poll 80002b9b0 (handle 0x1)
+[83.691] rest: open SceSystemStateMgrStatus -> 0
+[83.691] rest: watch on
+[84.137] headset.ini: cannot open /data/hearbridge/headset.ini
+[84.138] select: no headset.ini — will discover a new device
+[84.138] saved: 0 paired device(s)
+[84.151] hci_usb: controller selection: auto (adapter first)
+[84.154] usb: /dev/ugen1.2 is 054c:0ecc class 00
+[84.154] hci_usb: /dev/ugen1.2 is a Sony gamepad/audio dongle, skipped
+[84.155] usb: /dev/ugen0.2 is 0e8d:3605 class ef
+[84.155] hci_usb: using descriptor (2 HCI iface), evt 0x81 in 0x82 out 0x01
+[84.156] hci_usb: chip profile mediatek
+[84.156] hci_usb: MediaTek controller: ACL out 0x02, system scan paused during page/scan
+[84.161] hci_usb: opened /dev/ugen0.2 (console chip) (40 event / 20 ACL reads in flight)
+[84.162] hci_usb: chip MediaTek (0e8d:3605)
+[84.163] adapter: using /dev/ugen0.2 (the console's own chip), pref=auto, 1 Bluetooth adapter(s) listed
+[84.164] adapter: pick ugen0.2 = Console chip (0e8d:3605) [console]
+[84.176] hci_usb: reads armed: 40 event / 20 ACL (our command)
+[84.176] hci_usb: re-armed idle event read slot 4 (1 so far)
+[84.177] hci_usb: re-armed idle ACL read slot 54 (51 so far)
+[85.182] hci_cmd: 0x1005 no reply (try 1)
+[85.183] a2dp: controller 8 ACL buffers of 1021 bytes
+[85.185] a2dp: event mask 0x7DBFFFFFFFFFFFFF (SSP + EIR enabled)
+[85.187] a2dp: controller address 9C:37:CB:CA:D0:6D
+[85.188] a2dp: session open (pair/AVDTP/SBC next)
+[86.195] hci_cmd: 0x1009 no reply (try 1)
+[86.197] host_bdaddr: console 9C:37:CB:CA:D0:6D (already saved)
+[86.229] select: page command received: "scanu"
+[86.241] inquiry: starting (~3 s, length=2, GIAC, mode 2)
+[86.242] inquiry: Command Status for 0x0401: 0x00 (started)
+[88.812] inquiry: complete (status 0000)
+[88.812] inquiry: 2 HCI event(s) during the inquiry window
+[88.813] inquiry: found 0 device(s), 0 audio-likely
+[88.813] inquiry: empty (2 event(s)), CSR/PS4 mask + mode 1 and retrying
+[88.815] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[88.816] hci_usb diag: cmd=13 evt=12 acl_in=0 acl_out=0 err=0 last=0 switch=0
+[88.816] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[88.818] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[88.819] inquiry: Command Status for 0x0401: 0x00 (started)
+[91.389] inquiry: complete (status 0000)
+[91.390] inquiry: 2 HCI event(s) during the inquiry window
+[91.390] inquiry: found 0 device(s), 0 audio-likely
+[91.391] inquiry: still empty after recovery (2 event(s))
+[91.392] scan: system page scan restored (2)
+[91.398] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[91.525] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[91.526] inquiry: Command Status for 0x0401: 0x00 (started)
+[94.096] inquiry: complete (status 0000)
+[94.097] inquiry: 2 HCI event(s) during the inquiry window
+[94.098] inquiry: found 0 device(s), 0 audio-likely
+[94.098] inquiry: empty again (2 event(s)), retrying
+[94.099] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[94.099] hci_usb diag: cmd=21 evt=22 acl_in=0 acl_out=0 err=0 last=0 switch=0
+[94.100] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[94.101] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[94.102] inquiry: Command Status for 0x0401: 0x00 (started)
+[96.672] inquiry: complete (status 0000)
+[96.674] inquiry: 2 HCI event(s) during the inquiry window
+[96.674] inquiry: found 0 device(s), 0 audio-likely
+[96.674] inquiry: still empty after recovery (2 event(s))
+[96.676] scan: system page scan restored (2)
+[96.686] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[96.687] scan: finished (0 device(s) listed)
+[100.396] alive: page on :8090, network address 192.168.101.5
+[104.709] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
+[112.845] select: page command received: "scanu"
+[112.870] hci_usb: reads armed: 40 event / 20 ACL (our command)
+[112.871] hci_usb: re-armed idle ACL read slot 48 (101 so far)
+[113.875] hci_cmd: 0x0c19 no reply (try 1)
+[113.877] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[113.878] inquiry: Command Status for 0x0401: 0x00 (started)
+[116.448] inquiry: complete (status 0000)
+[117.455] hci_cmd: 0x0c45 no reply (try 1)
+[117.457] inquiry: 2 HCI event(s) during the inquiry window
+[117.457] inquiry: found 0 device(s), 0 audio-likely
+[117.458] inquiry: empty (2 event(s)), CSR/PS4 mask + mode 1 and retrying
+[117.460] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[117.460] hci_usb diag: cmd=33 evt=34 acl_in=0 acl_out=0 err=56 last=5 switch=0
+[117.461] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[117.462] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[117.463] inquiry: Command Status for 0x0401: 0x00 (started)
+[120.033] inquiry: complete (status 0000)
+[120.034] inquiry: 2 HCI event(s) during the inquiry window
+[120.035] inquiry: found 0 device(s), 0 audio-likely
+[120.035] inquiry: still empty after recovery (2 event(s))
+[120.036] scan: system page scan restored (2)
+[120.049] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[120.160] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[120.162] inquiry: Command Status for 0x0401: 0x00 (started)
+[122.732] inquiry: complete (status 0000)
+[122.733] inquiry: 2 HCI event(s) during the inquiry window
+[122.733] inquiry: found 0 device(s), 0 audio-likely
+[122.734] inquiry: empty again (2 event(s)), retrying
+[122.734] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[122.735] hci_usb diag: cmd=41 evt=44 acl_in=0 acl_out=0 err=56 last=5 switch=0
+[122.735] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[122.737] inquiry: starting (~3 s, length=1, GIAC, mode 1)
+[122.738] inquiry: Command Status for 0x0401: 0x00 (started)
+[123.190] inquiry: stopped early for a command (0 result(s))
+[123.713] inquiry: still empty after recovery (1 event(s))
+[123.715] scan: system page scan restored (2)
+[123.739] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[123.740] scan: finished (0 device(s) listed)
+[123.756] select: page command received: "scanu"
+[123.766] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[123.768] inquiry: Command Status for 0x0401: 0x00 (started)
+[126.338] inquiry: complete (status 0000)
+[126.339] inquiry: 2 HCI event(s) during the inquiry window
+[126.340] inquiry: found 0 device(s), 0 audio-likely
+[126.340] inquiry: empty (2 event(s)), CSR/PS4 mask + mode 1 and retrying
+[126.342] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[126.343] hci_usb diag: cmd=52 evt=56 acl_in=0 acl_out=0 err=56 last=5 switch=0
+[126.343] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[126.344] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[126.345] inquiry: Command Status for 0x0401: 0x00 (started)
+[128.915] inquiry: complete (status 0000)
+[128.917] inquiry: 2 HCI event(s) during the inquiry window
+[128.917] inquiry: found 0 device(s), 0 audio-likely
+[128.918] inquiry: still empty after recovery (2 event(s))
+[128.919] scan: system page scan restored (2)
+[128.932] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[129.057] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[129.058] inquiry: Command Status for 0x0401: 0x00 (started)
+[130.114] alive: page on :8090, network address 192.168.101.5
+[131.628] inquiry: complete (status 0000)
+[131.630] inquiry: 2 HCI event(s) during the inquiry window
+[131.630] inquiry: found 0 device(s), 0 audio-likely
+[131.631] inquiry: empty again (2 event(s)), retrying
+[131.631] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[131.632] hci_usb diag: cmd=60 evt=66 acl_in=0 acl_out=0 err=56 last=5 switch=0
+[131.632] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[131.633] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[131.634] inquiry: Command Status for 0x0401: 0x00 (started)
+[134.204] inquiry: complete (status 0000)
+[134.205] inquiry: 2 HCI event(s) during the inquiry window
+[134.206] inquiry: found 0 device(s), 0 audio-likely
+[134.206] inquiry: still empty after recovery (2 event(s))
+[134.208] scan: system page scan restored (2)
+[134.218] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[134.219] scan: finished (0 device(s) listed)
+[136.037] select: page command received: "scanu"
+[137.073] hci_cmd: 0x0c19 no reply (try 1)
+[137.075] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[137.077] inquiry: Command Status for 0x0401: 0x00 (started)
+[139.647] inquiry: complete (status 0000)
+[139.648] inquiry: 2 HCI event(s) during the inquiry window
+[139.649] inquiry: found 0 device(s), 0 audio-likely
+[139.649] inquiry: empty (2 event(s)), CSR/PS4 mask + mode 1 and retrying
+[139.651] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[139.652] hci_usb diag: cmd=71 evt=78 acl_in=0 acl_out=0 err=56 last=5 switch=0
+[139.652] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[139.653] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[139.654] inquiry: Command Status for 0x0401: 0x00 (started)
+[142.224] inquiry: complete (status 0000)
+[142.226] inquiry: 2 HCI event(s) during the inquiry window
+[142.226] inquiry: found 0 device(s), 0 audio-likely
+[142.226] inquiry: still empty after recovery (2 event(s))
+[142.228] scan: system page scan restored (2)
+[142.241] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[142.353] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[142.354] inquiry: Command Status for 0x0401: 0x00 (started)
+[144.924] inquiry: complete (status 0000)
+[144.925] inquiry: 2 HCI event(s) during the inquiry window
+[144.926] inquiry: found 0 device(s), 0 audio-likely
+[144.926] inquiry: empty again (2 event(s)), retrying
+[144.927] hci_usb diag: /dev/ugen0.2 if=0 evt=0x81 in=0x82 out=0x02 spare=0x01 tx=primary
+[144.927] hci_usb diag: cmd=79 evt=88 acl_in=0 acl_out=0 err=56 last=5 switch=0
+[144.928] hci_usb diag: queued evt=0 acl=0 tx=0 lost evt=0 acl=0 tx=0
+[144.929] inquiry: starting (~3 s, length=2, GIAC, mode 1)
+[144.931] inquiry: Command Status for 0x0401: 0x00 (started)
+[147.500] inquiry: complete (status 0000)
+[147.502] inquiry: 2 HCI event(s) during the inquiry window
+[147.502] inquiry: found 0 device(s), 0 audio-likely
+[147.503] inquiry: still empty after recovery (2 event(s))
+[147.504] scan: system page scan restored (2)
+[147.532] select: wrote 0 device(s) to /data/hearbridge/devices.json
+[147.533] scan: finished (0 device(s) listed)
+[155.506] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
