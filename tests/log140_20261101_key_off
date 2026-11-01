@@ -1,9 +1,9 @@
 diag.txt
 hearbridge: 1.4.0 (one build for all firmwares, compiled Oct 30 2026)
-previous run ended with: 769] select: wrote 0 device(s) to /data/hearbridge/devices.json|[116.770] scan: finished (0 device(s) listed)|[120.494] alive: page on :8090, network address 192.168.101.5|[124.746] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)|[150.498] alive: page on :8090, network address 192.168.101.5|[180.469] alive: page on :8090, network address 192.168.101.5|
+previous run ended with: 769] select: wrote 0 device(s) to /data/hearbridge/devices.json|[116.770] scan: finished (0 device(s) listed)|[120.494] alive: page on :8090, network address <IPV4>|[124.746] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)|[150.498] alive: page on :8090, network address <IPV4>|[180.469] alive: page on :8090, network address <IPV4>|
 state dir: /data/hearbridge: mkdir errno 0; lock ok (errno 0); log ok
-web page: http://192.168.101.5:8090 (diagnostics at http://192.168.101.5:8090/api/diag)
-tile url: http://127.0.0.1:8090/start
+web page: http://<IPV4>:8090 (diagnostics at http://<IPV4>:8090/api/diag)
+tile url: http://<IPV4>:8090/start
 libSceAppInstUtil.sprx: loaded from /system/common/lib/libSceAppInstUtil.sprx
 tile: files rewritten; appmeta before no; init 0 (errno 0); TitleDir NOT FOUND; InstallAll -> 0 (errno 0); AppExists yes; appmeta after no; RESULT ok
 tile appmeta: /user/appmeta/HRBG00001 missing
@@ -34,11 +34,11 @@ hearbridge.log
 [100.309] attach to running controller (no reset); stop file /data/hearbridge/stop
 [100.310] volume: base gain 250% (/data/hearbridge/gain)
 [100.311] latency: default target 200 ms for a new headset
-[100.312] http: control page at http://192.168.101.5:8090
+[100.312] http: control page at http://<IPV4>:8090
 [100.315] tile: loaded /system/common/lib/libSceAppInstUtil.sprx (rv 8242, handle 0x2032)
 [100.426] tile: icon from tile version 1, this is 10: reinstalling (unregister 0)
 [103.427] tile: AppExists no after unregister — clear to re-register
-[116.157] tile: register HRBG00001 -> ok (opens http://127.0.0.1:8090/start)
+[116.157] tile: register HRBG00001 -> ok (opens http://<IPV4>:8090/start)
 [116.158] tile: files rewritten; appmeta before no; init 0 (errno 0); TitleDir NOT FOUND; InstallAll -> 0 (errno 0); AppExists yes; appmeta after no; RESULT ok
 [116.188] sysinfo: fw kernel 0x13600007, model CFI-7019 B01X, authid 0x480000001000000e
 [116.189] avcap2: libSceIpmi.sprx already loaded (handle 0x12)
@@ -75,18 +75,18 @@ hearbridge.log
 [117.357] hci_cmd: 0x1005 no reply (try 1)
 [117.359] a2dp: controller 8 ACL buffers of 1021 bytes
 [117.360] a2dp: event mask 0x7DBFFFFFFFFFFFFF (SSP + EIR enabled)
-[117.361] a2dp: controller address 9C:37:CB:CA:D0:6D
+[117.361] a2dp: controller address MAC01
 [117.361] a2dp: session open (pair/AVDTP/SBC next)
 [118.366] hci_cmd: 0x1009 no reply (try 1)
-[118.389] host_bdaddr: saved 9C:37:CB:CA:D0:6D
-[118.389] host_bdaddr: console 9C:37:CB:CA:D0:6D is now the shared host address
+[118.389] host_bdaddr: saved MAC01
+[118.389] host_bdaddr: console MAC01 is now the shared host address
 [126.431] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
-[129.257] acl: connection request from 68:CA:C4:CC:A8:10
-[129.258] conn-req: 68:CA:C4:CC:A8:10 CoD 240418 -> rejecting (not saved, 0x0F)
-[129.258] btlink: turned down a connection from saved 68:CA:C4:CC:A8:10 (reason 0x0f)
+[129.257] acl: connection request from MAC02
+[129.258] conn-req: MAC02 CoD 240418 -> rejecting (not saved, 0x0F)
+[129.258] btlink: turned down a connection from saved MAC02 (reason 0x0f)
 [129.259] hci_usb: reads armed: 40 event / 20 ACL (our command)
 [129.260] hci_usb: re-armed idle ACL read slot 48 (101 so far)
-[130.212] alive: page on :8090, network address 192.168.101.5
+[130.212] alive: page on :8090, network address <IPV4>
 [137.289] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
 [145.825] select: page command received: "scanu"
 [145.850] hci_usb: reads armed: 40 event / 20 ACL (our command)
@@ -127,17 +127,17 @@ hearbridge.log
 [157.311] scan: system page scan restored (2)
 [157.340] select: wrote 0 device(s) to /data/hearbridge/devices.json
 [157.341] scan: finished (0 device(s) listed)
-[160.269] alive: page on :8090, network address 192.168.101.5
+[160.269] alive: page on :8090, network address <IPV4>
 [165.334] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
-[96.340] lock: stale record (pid 97, boot 1793525693, written under flock) taken over
+[96.340] lock: stale record (pid 97, boot <BOOT_ID>, written under flock) taken over
 [96.361] HearBridge PS5 1.4.0: startup after replace sweep
 [96.361] HearBridge PS5 1.4.0
 [96.371] attach to running controller (no reset); stop file /data/hearbridge/stop
 [96.372] volume: base gain 250% (/data/hearbridge/gain)
 [96.373] latency: default target 200 ms for a new headset
-[96.374] http: control page at http://192.168.101.5:8090
+[96.374] http: control page at http://<IPV4>:8090
 [96.397] tile: loaded /system/common/lib/libSceAppInstUtil.sprx (rv 8242, handle 0x2032)
-[109.077] tile: register HRBG00001 -> ok (opens http://127.0.0.1:8090/start)
+[109.077] tile: register HRBG00001 -> ok (opens http://<IPV4>:8090/start)
 [109.078] tile: files rewritten; appmeta before no; init 0 (errno 0); TitleDir NOT FOUND; InstallAll -> 0 (errno 0); AppExists yes; appmeta after no; RESULT ok
 [109.094] sysinfo: fw kernel 0x13600007, model CFI-7019 B01X, authid 0x480000001000000e
 [109.095] avcap2: libSceIpmi.sprx already loaded (handle 0x12)
@@ -174,10 +174,10 @@ hearbridge.log
 [110.546] hci_cmd: 0x1005 no reply (try 1)
 [110.547] a2dp: controller 8 ACL buffers of 1021 bytes
 [110.549] a2dp: event mask 0x7DBFFFFFFFFFFFFF (SSP + EIR enabled)
-[110.551] a2dp: controller address 9C:37:CB:CA:D0:6D
+[110.551] a2dp: controller address MAC01
 [110.551] a2dp: session open (pair/AVDTP/SBC next)
 [111.559] hci_cmd: 0x1009 no reply (try 1)
-[111.562] host_bdaddr: console 9C:37:CB:CA:D0:6D (already saved)
+[111.562] host_bdaddr: console MAC01 (already saved)
 [111.577] select: page command received: "scanu"
 [111.589] inquiry: starting (~3 s, length=2, GIAC, mode 2)
 [111.590] inquiry: Command Status for 0x0401: 0x00 (started)
@@ -214,15 +214,15 @@ hearbridge.log
 [122.054] scan: system page scan restored (2)
 [122.065] select: wrote 0 device(s) to /data/hearbridge/devices.json
 [122.065] scan: finished (0 device(s) listed)
-[126.085] alive: page on :8090, network address 192.168.101.5
+[126.085] alive: page on :8090, network address <IPV4>
 [130.095] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
-[139.480] acl: connection request from 68:CA:C4:CC:A8:10
-[139.481] conn-req: 68:CA:C4:CC:A8:10 CoD 240418 -> rejecting (not saved, 0x0F)
-[139.482] btlink: turned down a connection from saved 68:CA:C4:CC:A8:10 (reason 0x0f)
+[139.480] acl: connection request from MAC02
+[139.481] conn-req: MAC02 CoD 240418 -> rejecting (not saved, 0x0F)
+[139.482] btlink: turned down a connection from saved MAC02 (reason 0x0f)
 [139.482] hci_usb: reads armed: 40 event / 20 ACL (our command)
 [139.483] hci_usb: re-armed idle ACL read slot 48 (101 so far)
 [147.507] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
-[156.075] alive: page on :8090, network address 192.168.101.5
+[156.075] alive: page on :8090, network address <IPV4>
 [163.679] select: page command received: "scanu"
 [163.707] hci_usb: reads armed: 40 event / 20 ACL (our command)
 [163.708] hci_usb: re-armed idle ACL read slot 42 (151 so far)
@@ -284,16 +284,16 @@ hearbridge.log
 [181.696] scan: system page scan restored (2)
 [181.707] select: wrote 0 device(s) to /data/hearbridge/devices.json
 [181.708] scan: finished (0 device(s) listed)
-[186.141] alive: page on :8090, network address 192.168.101.5
-[60.290] lock: stale record (pid 97, boot 1793525902, written under flock) taken over
+[186.141] alive: page on :8090, network address <IPV4>
+[60.290] lock: stale record (pid 97, boot <BOOT_ID>, written under flock) taken over
 [60.308] HearBridge PS5 1.4.0: startup after replace sweep
 [60.309] HearBridge PS5 1.4.0
 [60.318] attach to running controller (no reset); stop file /data/hearbridge/stop
 [60.319] volume: base gain 250% (/data/hearbridge/gain)
 [60.320] latency: default target 200 ms for a new headset
-[60.321] http: control page at http://192.168.101.5:8090
+[60.321] http: control page at http://<IPV4>:8090
 [60.356] tile: loaded /system/common/lib/libSceAppInstUtil.sprx (rv 8242, handle 0x2032)
-[73.028] tile: register HRBG00001 -> ok (opens http://127.0.0.1:8090/start)
+[73.028] tile: register HRBG00001 -> ok (opens http://<IPV4>:8090/start)
 [73.029] tile: files rewritten; appmeta before no; init 0 (errno 0); TitleDir NOT FOUND; InstallAll -> 0 (errno 0); AppExists yes; appmeta after no; RESULT ok
 [73.048] sysinfo: fw kernel 0x13600007, model CFI-7019 B01X, authid 0x480000001000000e
 [73.050] avcap2: libSceIpmi.sprx already loaded (handle 0x12)
@@ -330,17 +330,17 @@ hearbridge.log
 [74.114] hci_cmd: 0x1005 no reply (try 1)
 [74.116] a2dp: controller 8 ACL buffers of 1021 bytes
 [74.117] a2dp: event mask 0x7DBFFFFFFFFFFFFF (SSP + EIR enabled)
-[74.118] a2dp: controller address 9C:37:CB:CA:D0:6D
+[74.118] a2dp: controller address MAC01
 [74.119] a2dp: session open (pair/AVDTP/SBC next)
 [75.126] hci_cmd: 0x1009 no reply (try 1)
-[75.129] host_bdaddr: console 9C:37:CB:CA:D0:6D (already saved)
+[75.129] host_bdaddr: console MAC01 (already saved)
 [83.160] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
 [89.444] select: page command received: "scanu"
 [89.467] hci_usb: reads armed: 40 event / 20 ACL (our command)
 [89.468] hci_usb: re-armed idle ACL read slot 48 (101 so far)
 [89.469] inquiry: starting (~3 s, length=2, GIAC, mode 2)
 [89.471] inquiry: Command Status for 0x0401: 0x00 (started)
-[90.039] alive: page on :8090, network address 192.168.101.5
+[90.039] alive: page on :8090, network address <IPV4>
 [92.040] inquiry: complete (status 0000)
 [92.041] inquiry: 2 HCI event(s) during the inquiry window
 [92.042] inquiry: found 0 device(s), 0 audio-likely
@@ -411,19 +411,19 @@ hearbridge.log
 [116.741] scan: system page scan restored (2)
 [116.769] select: wrote 0 device(s) to /data/hearbridge/devices.json
 [116.770] scan: finished (0 device(s) listed)
-[120.494] alive: page on :8090, network address 192.168.101.5
+[120.494] alive: page on :8090, network address <IPV4>
 [124.746] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
-[150.498] alive: page on :8090, network address 192.168.101.5
-[180.469] alive: page on :8090, network address 192.168.101.5
-[70.916] lock: stale record (pid 97, boot 1793526171, written under flock) taken over
+[150.498] alive: page on :8090, network address <IPV4>
+[180.469] alive: page on :8090, network address <IPV4>
+[70.916] lock: stale record (pid 97, boot <BOOT_ID>, written under flock) taken over
 [70.935] HearBridge PS5 1.4.0: startup after replace sweep
 [70.935] HearBridge PS5 1.4.0
 [70.960] attach to running controller (no reset); stop file /data/hearbridge/stop
 [70.962] volume: base gain 250% (/data/hearbridge/gain)
 [70.962] latency: default target 200 ms for a new headset
-[70.963] http: control page at http://192.168.101.5:8090
+[70.963] http: control page at http://<IPV4>:8090
 [71.000] tile: loaded /system/common/lib/libSceAppInstUtil.sprx (rv 8242, handle 0x2032)
-[83.660] tile: register HRBG00001 -> ok (opens http://127.0.0.1:8090/start)
+[83.660] tile: register HRBG00001 -> ok (opens http://<IPV4>:8090/start)
 [83.661] tile: files rewritten; appmeta before no; init 0 (errno 0); TitleDir NOT FOUND; InstallAll -> 0 (errno 0); AppExists yes; appmeta after no; RESULT ok
 [83.674] sysinfo: fw kernel 0x13600007, model CFI-7019 B01X, authid 0x480000001000000e
 [83.676] avcap2: libSceIpmi.sprx already loaded (handle 0x12)
@@ -460,10 +460,10 @@ hearbridge.log
 [85.182] hci_cmd: 0x1005 no reply (try 1)
 [85.183] a2dp: controller 8 ACL buffers of 1021 bytes
 [85.185] a2dp: event mask 0x7DBFFFFFFFFFFFFF (SSP + EIR enabled)
-[85.187] a2dp: controller address 9C:37:CB:CA:D0:6D
+[85.187] a2dp: controller address MAC01
 [85.188] a2dp: session open (pair/AVDTP/SBC next)
 [86.195] hci_cmd: 0x1009 no reply (try 1)
-[86.197] host_bdaddr: console 9C:37:CB:CA:D0:6D (already saved)
+[86.197] host_bdaddr: console MAC01 (already saved)
 [86.229] select: page command received: "scanu"
 [86.241] inquiry: starting (~3 s, length=2, GIAC, mode 2)
 [86.242] inquiry: Command Status for 0x0401: 0x00 (started)
@@ -500,7 +500,7 @@ hearbridge.log
 [96.676] scan: system page scan restored (2)
 [96.686] select: wrote 0 device(s) to /data/hearbridge/devices.json
 [96.687] scan: finished (0 device(s) listed)
-[100.396] alive: page on :8090, network address 192.168.101.5
+[100.396] alive: page on :8090, network address <IPV4>
 [104.709] hci_usb: reads armed: 4 event / 0 ACL (idle, shared)
 [112.845] select: page command received: "scanu"
 [112.870] hci_usb: reads armed: 40 event / 20 ACL (our command)
@@ -560,7 +560,7 @@ hearbridge.log
 [128.932] select: wrote 0 device(s) to /data/hearbridge/devices.json
 [129.057] inquiry: starting (~3 s, length=2, GIAC, mode 1)
 [129.058] inquiry: Command Status for 0x0401: 0x00 (started)
-[130.114] alive: page on :8090, network address 192.168.101.5
+[130.114] alive: page on :8090, network address <IPV4>
 [131.628] inquiry: complete (status 0000)
 [131.630] inquiry: 2 HCI event(s) during the inquiry window
 [131.630] inquiry: found 0 device(s), 0 audio-likely
